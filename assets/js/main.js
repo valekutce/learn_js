@@ -172,21 +172,26 @@ let person = {
 // }
 
 let money = +prompt('Ваш бюджет на месяц?', ''),
-    time = prompt('Введите дату в формате YYYY-MM-DD', ''),
-    expensesi = prompt('Введите обязательную статью расходов в этом месяце', ''),
-    expensesis = +prompt('Во сколько обойдется?', '');
+    time = prompt('Введите дату в формате YYYY-MM-DD', '');
 
     let appData = {
-        'бюджет': money,
-        'timeData': time
+        budget: money,
+        expenses: {},
+        optionalExpenses: {},
+        income: [],
+        timeData: time,
+        savings: false
     }
 
-    let expenses = {
-        expenses: expensesis
-    }
+    let a1 = prompt('Введите обязательную статью расходов в этом месяце', ''),
+        a2 = prompt('Во сколько обойдется?', ''),
+        a3 = prompt('Введите обязательную статью расходов в этом месяце', ''),
+        a4 = prompt('Во сколько обойдется?', '');
+
+    appData.expenses.a1 = a2;
+    appData.expenses.a3 = a4;
 
     alert('Ваш бюджет на 1 день: ' + money/30);
-    console.log('Месячный бюджет: ' + appData.бюджет);
+    console.log('Месячный бюджет: ' + appData.budget);
     console.log('На число: ' + appData.timeData);
-    console.log(expenses.expensesi);
-    console.log(expenses.expensesis);
+    console.log(appData.expenses);
