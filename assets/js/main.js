@@ -171,6 +171,8 @@ let person = {
 //     preloader.style.display = 'none';
 // }
 
+
+
 let money = +prompt('Ваш бюджет на месяц?', ''),
     time = prompt('Введите дату в формате YYYY-MM-DD', '');
 
@@ -183,15 +185,78 @@ let money = +prompt('Ваш бюджет на месяц?', ''),
         savings: false
     }
 
-    let a1 = prompt('Введите обязательную статью расходов в этом месяце', ''),
-        a2 = prompt('Во сколько обойдется?', ''),
-        a3 = prompt('Введите обязательную статью расходов в этом месяце', ''),
-        a4 = prompt('Во сколько обойдется?', '');
+    for (let i = 0; i < 2; i++) {
+        let a = prompt('Введите обязательную статью расходов в этом месяце', ''),
+            b = prompt('Во сколько обойдется?', '');
+        
+        if (typeof(a) === 'string' && typeof(a) != null && typeof(b) != null && typeof(a) != '' && typeof(b) != '') {
+            console.log('Done');
+            appData.expenses[a] = b;
+        } else {
+            i--;
+        }
+    }
 
-    appData.expenses.a1 = a2;
-    appData.expenses.a3 = a4;
+    appData.moneyPerDay = money/30;
 
-    alert('Ваш бюджет на 1 день: ' + money/30);
-    console.log('Месячный бюджет: ' + appData.budget);
-    console.log('На число: ' + appData.timeData);
-    console.log(appData.expenses);
+    alert('Ваш бюджет на 1 день: ' + appData.moneyPerDay);
+
+    if (appData.moneyPerDay < 2000) {
+        console.log('Ваш бюджет ниже среднего уровня');
+    } else if (appData.moneyPerDay > 2000 && appData.moneyPerDay < 10000) {
+        console.log('У вас средни бюджет');
+    } else if (appData.moneyPerDay > 2000) {
+        console.log('У вас высокий бюджет');
+    }
+
+    // -- Условия
+ 
+
+// if (nums < 50) {
+//     alert("Ваше число меньше 50");
+// } else if (nums > 50 && nums < 100) {
+//     alert("Ваше число между 50 и 100");
+// } else {
+//     alert("Ваше число больше 100");
+// }
+
+// Условия в виде тернарного оператора
+
+// (nums == 50) ? console.log('Верно') : console.log('Неверно');
+
+// switch (nums) {
+//     case nums < 50:
+//         alert("Ваше число меньше 50");
+//         break;
+//     case nums > 50:
+//         console.log("Ваше число между 50 и 100");
+//         break;
+//     case nums > 100:
+//         console.log("Ваше число больше 100");
+//         break;
+//     case 50:
+//         console.log("Верно");
+//         break;
+// }
+
+// -- Циклы
+
+// let nums = prompt("Введите число", "");
+
+// while
+// do while
+// for
+
+// while (nums <= 10) {
+//     console.log(nums);
+//     nums++;
+// }
+
+// do {
+//     console.log(nums);
+//     nums++;
+// } while (nums <= 10);
+
+// for (let i = 1; i < 10; i++) {
+//     console.log(i); 
+// }
