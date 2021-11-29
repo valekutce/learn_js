@@ -120,13 +120,73 @@ let person = {
 
 // Декремент ++ и Инкремент -- Префексная и Посвиксная
 
-let decr = 10,
-    incr = 10;
-console.log(decr++);
-console.log(incr--);
+// let decr = 10,
+//     incr = 10;
+// console.log(decr++);
+// console.log(incr--);
 
 // Присвоение =
 // Равно по значению ==
 // Равно по типу данных ===
 
 // Логический опиратор И &&, Или || 
+
+// Практика 
+// Модельное окно
+
+// let popup_click = document.getElementById('popup-click'),
+//     popup = document.getElementById('popup'),
+//     popup_close = document.getElementById('popup-close');
+
+//     popup_click.onclick = function () {
+//         popup.classList.add('popup-active');
+//         this.style.display = "none";  
+//     }
+//     popup_close.onclick = function () {
+//         popup.classList.remove('popup-active');
+//         popup_click.style.display = "block";
+//     }
+
+
+// Раскрывающие блоки
+
+// let dropDownHeader = document.getElementsByClassName('drop-down-header');
+    
+// for (let i = 0; i < dropDownHeader.length; i++) {
+//     dropDownHeader[i].addEventListener('click', function () {
+//         this.classList.toggle('active');
+//         let dropDownContent = this.nextElementSibling;
+//         if (dropDownContent.style.maxHeight) {
+//             dropDownContent.style.maxHeight = null;
+//         } else {
+//             dropDownContent.style.maxHeight = dropDownContent.scrollHeight + 'px';
+//         }
+//     });
+    
+// }
+
+// Css preloader на странице
+// let preloader = document.getElementById('preloader');
+// window.onload = function () {
+//     preloader.style.display = 'none';
+// }
+
+let money = +prompt('Ваш бюджет на месяц?', ''),
+    time = prompt('Введите дату в формате YYYY-MM-DD', ''),
+    expensesi = prompt('Введите обязательную статью расходов в этом месяце', ''),
+    expensesis = +prompt('Во сколько обойдется?', '');
+
+    let appData = {
+        'бюджет': money,
+        'timeData': time
+    }
+
+    let expenses = {
+        expenses: expensesis
+    }
+
+    alert('Ваш бюджет на 1 день: ' + money/30);
+    console.log('Месячный бюджет: ' + appData.бюджет);
+    console.log('На число: ' + appData.timeData);
+    console.log(expenses.expensesi);
+    console.log(expenses.expensesis);
