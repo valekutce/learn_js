@@ -6,14 +6,104 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Уроки по JavaScript</title>
-    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 
 </head>
 
 <body>
 
-
     <h1 id="title">Язык программирования java script</h1>
+    <div class="app" style="margin-bottom: 100px;">
+    <div class="logo">
+        <span>money</span>
+        keeper
+    </div>
+    <div class="title">
+        Расчет дневного бюджета
+    </div>
+    <div class="main">
+        <div class="data">
+            <div class="choose-expenses">Введите обязательные расходы</div>
+            <input class="expenses-item" type="text" id="expenses_1" placeholder="Наименование">
+			<input class="expenses-item" type="text" id="expenses_2" placeholder="Цена">
+			<input class="expenses-item" type="text" id="expenses_3" placeholder="Наименование">
+			<input class="expenses-item" type="text" id="expenses_4" placeholder="Цена">
+            <button class="expenses-item-btn">Утвердить</button>
+            
+            <div class="optionalexpenses">Введите необязательные расходы</div>
+			<input class="optionalexpenses-item" type="text" id="optionalexpenses_1">
+			<input class="optionalexpenses-item" type="text" id="optionalexpenses_2">
+			<input class="optionalexpenses-item" type="text" id="optionalexpenses_3">
+            <button class="optionalexpenses-btn">Утвердить</button>
+            
+            <div class="count-budget">Расчет дневного бюджета</div>
+            <button class="count-budget-btn">Рассчитать</button>
+            
+            <div class="choose-income-label">Введите статьи возможного дохода через запятую</div>
+            <input class="choose-income" type="text" id="income">
+            
+            <div class="checksavings">Есть ли накопления: 
+                <input id="savings" type="checkbox" />
+            </div>
+            <label for="sum">Сумма</label>
+			<input class="choose-sum" id="sum" type="text">
+			<label for="percent">Процент</label>
+            <input class="choose-percent" id="percent" type="text">
+            
+            <div class="open">
+                <button class="start" id="start">Начать расчет</button>
+            </div>
+        </div>
+        <div class="result">
+            <div class="result-table">
+                <div class="budget">Доход: </div>
+                <div class="budget-value"></div>
+    
+                <div class="daybudget">Бюджет на 1 день: </div>
+                <div class="daybudget-value"></div>
+    
+                <div class="level">Уровень дохода: </div>
+                <div class="level-value"></div>
+    
+                <div class="expenses">Обязательные расходы: </div>
+                <div class="expenses-value"></div>
+    
+                <div class="optionalexpenses">Возможные траты: </div>
+                <div class="optionalexpenses-value"></div>
+    
+                <div class="income">Дополнительный доход: </div>
+                <div class="income-value"></div>
+    
+                <div class="monthsavings">Накопления за 1 месяц:</div>
+                <div class="monthsavings-value"></div>
+    
+                <div class="yearsavings">Накопления за 1 год:</div>
+                <div class="yearsavings-value"></div>
+            </div>
+            <div class="time-data">
+                <div class="year">
+                    Год:
+                    <input class="year-value" type="text" readonly>
+                </div>
+                <div class="month">
+                    Месяц:
+                    <input class="month-value" type="text" readonly>
+                </div>
+                <div class="day">
+                    День:
+                    <input class="day-value" type="text" readonly>
+                </div>
+            </div>
+            <div>Чистый доход с обязательными рассходами: <br>
+                <input type="text" class="main-value" style="height: 40px; margin-bottom: 10px; font-size: 25px; color: green; padding-left: 10px;">
+            </div>
+            <div>
+                <button class="main-sum-btn" style="margin-left: 0;;">Чистый доход</button>
+            </div>
+        </div>
+        
+    </div>
+</div>
 
     <!-- Практика  -->
     <!-- Модельное окно -->
@@ -54,16 +144,16 @@
         </div>
     </div> -->
 
-    <!-- Css preloader на странице -->
-    <!-- <div class="preloader" id="preloader">
+    <!-- Css preloader на странице  -->
+     <div class="preloader" id="preloader">
         <div class="cssload-dots">
-            <div class="cssload-dot"></div>
+            <div class="cssload-dot first"></div>
             <div class="cssload-dot"></div>
             <div class="cssload-dot"></div>
             <div class="cssload-dot"></div>
             <div class="cssload-dot"></div>
         </div>
-        
+<!--         
         <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
             <defs>
                 <filter id="goo">
@@ -72,9 +162,70 @@
                     <feBlend in2="goo" in="SourceGraphic" result="mix" ></feBlend>
                 </filter>
             </defs>
-        </svg>
-    </div> -->
-   
+        </svg> -->
+    </div>
+    <h2>Табы на нативном Js</h2>
+
+    <div class="tab-conteiner">
+        <div class="tab-header">
+            <div class="tab-item">Таб1</div>
+            <div class="tab-item">Таб2</div>
+            <div class="tab-item">Таб3</div>
+            <div class="tab-item">Таб4</div>
+            <div class="tab-item">Таб5</div>
+        </div>
+        <div class="tab-content fade">
+            <h3>Таб1</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae molestiae voluptates quam omnis asperiores non minima in officiis tempora praesentium, a magnam explicabo nostrum reiciendis sed minus aperiam delectus error? Quibusdam ab iste sed porro itaque. Veniam, voluptatem. Nisi aperiam expedita voluptatum recusandae quaerat enim, eum optio voluptas architecto eligendi in animi hic necessitatibus voluptatibus cum consequatur itaque magni iste consectetur adipisci voluptate aliquid! At, ea veniam non reiciendis harum, unde recusandae suscipit et rerum fugit numquam? Dignissimos quaerat molestias velit, repellendus voluptatum possimus modi, iste voluptatem ipsum voluptate iusto dolorum unde cum optio recusandae! Excepturi tempora dignissimos quos temporibus.</p>
+        </div>
+        <div class="tab-content fade">
+            <h3>Таб2</h3>
+            <p>Nisi aperiam expedita voluptatum recusandae quaerat enim, eum optio voluptas architecto eligendi in animi hic necessitatibus voluptatibus cum consequatur itaque magni iste consectetur adipisci voluptate aliquid! At, ea veniam non reiciendis harum, unde recusandae suscipit et rerum fugit numquam? Dignissimos quaerat molestias velit, repellendus voluptatum possimus modi, iste voluptatem ipsum voluptate iusto dolorum unde cum optio recusandae! Excepturi tempora dignissimos quos temporibus.</p>
+        </div>
+        <div class="tab-content fade">
+            <h3>Таб3</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae molestiae voluptates quam omnis asperiores non minima in officiis tempora praesentium, a magnam explicabo nostrum reiciendis sed minus aperiam delectus error? .</p>
+        </div>
+        <div class="tab-content fade">
+            <h3>Таб4</h3>
+            <p>1000000 ipsum dolor sit, amet consectetur adipisicing elit. Vitae molestiae voluptates quam omnis asperiores non minima in officiis tempora praesentium, a magnam explicabo nostrum reiciendis sed minus aperiam delectus error? Quibusdam ab iste sed porro itaque. Veniam, voluptatem. Nisi aperiam expedita voluptatum recusandae quaerat enim, eum optio voluptas architecto eligendi in animi hic necessitatibus voluptatibus cum consequatur itaque magni iste consectetur adipisci voluptate aliquid! At, ea veniam non reiciendis harum, unde recusandae suscipit et rerum fugit numquam? Dignissimos quaerat molestias velit, repellendus voluptatum possimus modi, iste voluptatem ipsum voluptate iusto dolorum unde cum optio recusandae! Excepturi tempora dignissimos quos temporibus.Quibusdam ab iste sed porro itaque. Veniam, voluptatem. </p>
+        </div>
+        <div class="tab-content fade">
+            <h3>Таб5</h3>
+            <p>200000000000000, voluptatem. Nisi aperiam expedita voluptatum recusandae quaerat enim, eum optio voluptas architecto eligendi in animi hic necessitatibus voluptatibus cum consequatur itaque magni iste consectetur adipisci voluptate aliquid! At, ea veniam non reiciendis harum, unde recusandae suscipit et rerum fugit numquam? Dignissimos quaerat molestias velit, repellendus voluptatum possimus modi, iste voluptatem ipsum voluptate iusto dolorum unde cum optio recusandae! Excepturi tempora dignissimos quos temporibus.Quibusdam ab iste sed porro itaque. Veniam, voluptatem.</p>
+        </div>
+    </div>
+    <h2>Тема урока События</h2>
+    <div class="events">
+        <a class="even" href="assets/img/image.psd (7).jpg"><img src="assets/img/image.psd (7).jpg" alt=""></a>
+    </div>
+    <div class="wrapBtn">
+        <button>Кнопка1</button><button class="open">Кнопка2</button><button>Кнопка3</button><button>Кнопка4</button><button class="open">Кнопка5</button>
+    </div>
+
+<div class="wrapblockForm">
+    <div class="blockElem">
+        <span>Первая строчка:</span> <span class="oneString"></span> <br> <span>Вторая строчка:</span> <span class="twoString"></span>
+    </div>
+
+    <div class="blockForm">
+        <form action="">
+            <input type="text" name="text" id="text">
+            <textarea name="textar" id="textar" cols="30" rows="10"></textarea>
+            <input type="button" value="Отправить" id="but">
+        </form>
+    </div>
+
+</div>    
+
+
+
+    <div class="container">
+        <div class="container-wrap">
+            <div class="blocket"></div>
+        </div>
+    </div>
+
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
